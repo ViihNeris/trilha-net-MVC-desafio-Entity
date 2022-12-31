@@ -1,0 +1,45 @@
+@model trilha_net_MVC_desafio_Entity.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Obter Tarefa por ID";
+}
+<div class="d-flex flex-column align-items-center text-center">
+
+    <h1 class="mt-5">@ViewData["Title"]</h1>
+
+    <p>Visualize abaixo o resultado da sua consulta por <b>ID</b>.</p>
+
+    <table class="table m-5">
+        <thead>
+            <tr class="table-info p-3">
+                <th class="p-3">@Html.DisplayNameFor(model => model.Id)</th>
+                <th class="p-3">@Html.DisplayNameFor(model => model.Titulo)</th>
+                <th class="p-3">@Html.DisplayNameFor(model => model.Descricao)</th>
+                <th class="p-3">@Html.DisplayNameFor(model => model.Data) e Hora</th>
+                <th class="p-3">@Html.DisplayNameFor(model => model.Status)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="font-weight: bold; padding: 20px 0; font-size: 18px">
+                    @Html.DisplayFor(model => model.Id)
+                </td>
+                <td style="padding: 20px 0">
+                    @Html.DisplayFor(model => model.Titulo)
+                </td>
+                <td style="padding: 20px 0">
+                    @Html.DisplayFor(model => model.Descricao)
+                </td>
+                <td style="padding: 20px 0">
+                    @Html.DisplayFor(model => model.Data)
+                </td>
+                <td style="padding: 20px 0">
+                    @Html.DisplayFor(model => model.Status)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="m-5 d-flex justify-content-center">
+    <a asp-action="BuscaDetalhada" role="button" class="col-3 btn btn-secondary">Voltar</a>
+</div>

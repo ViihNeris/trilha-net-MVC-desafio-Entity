@@ -1,0 +1,46 @@
+@model trilha_net_MVC_desafio_Entity.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Atualizar Tarefa";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Atualizar">
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label"></label>
+                <input type="datetime-local" asp-for="Data" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <select asp-for="Status" name="Status" class="form-select" aria-label="Default select example">
+                    <option value=0>Pendente</option>
+                    <option value=1>Finalizado</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Atualizar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<div class="d-flex justify-content-end mb-5">
+    <a asp-action="Index" role="button" class="btn btn-secondary">Voltar</a>
+</div>

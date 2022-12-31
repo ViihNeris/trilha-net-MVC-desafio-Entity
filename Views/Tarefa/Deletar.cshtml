@@ -1,0 +1,45 @@
+@model trilha_net_MVC_desafio_Entity.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Deletar Tarefa";
+}
+
+<h1>Deseja realmente deletar essa tarefa?</h1>
+<p style="color: red">Essa operação é IRREVERSÍVEL.</p>
+
+<hr />
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Titulo) @* Coloca o nome na label *@
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x=>x.Titulo) @* Coloca o campo em si *@
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Descricao)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x=>x.Descricao)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Data)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x=>x.Data)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Status)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x=>x.Status)
+        </dt>
+    </dl>
+</div>
+<hr />
+<form asp-action="Deletar">
+    <input type="submit" value="Deletar" class="btn btn-danger" />
+</form>
+<br>
+<a asp-action="Index">Página Inicial</a>

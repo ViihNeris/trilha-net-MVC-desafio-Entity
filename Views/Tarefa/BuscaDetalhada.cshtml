@@ -1,0 +1,76 @@
+@model trilha_net_MVC_desafio_Entity.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Busca Detalhada";
+}
+<div class="text-center mt-5">
+
+    <h1 style="color: #1F879C">@ViewData["Title"]</h1>
+
+    <p>Escolha uma forma de localizar seu registro!</p>
+
+    <div class="d-flex justify-content-around m-5">
+        @* <form asp-action="ObterPorId({Id})">
+            <input asp-for="Id" class="form-control"/>
+            <a asp-action="ObterPorId" role="button" asp-route-id="{Id}" class="btn btn-info m-3">Obter por ID</a>
+            </form> *@
+
+        @using (Html.BeginForm("ObterPorId"))
+        {
+            <label style="font-size: 25px; font-weight: 600; margin-bottom: 10px; color: #1F879C">ID</label>
+            <input type="number" id="id" name="id" class="form-control" placeholder="Digite um ID válido" required>
+            <input type="submit" value="Obter por Id" class="btn btn-info m-3" asp-action="ObterPorId">
+        }
+
+        @* <form asp-action="ObterPorTitulo">
+            <input asp-for="Titulo" class="form-control" />
+            <a asp-action="ObterPorTitulo" role="button" class="btn btn-info m-3">Obter Por Titulo</a>
+            </form> *@
+
+        @using (Html.BeginForm("ObterPorTitulo"))
+        {
+            <label style="font-size: 25px; font-weight: 600; margin-bottom: 10px; color: #1F879C">Título</label>
+            <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Digite um titulo válido"
+            required>
+            <input type="submit" value="Obter por Titulo" class="btn btn-info m-3" asp-action="ObterPorTitulo">
+        }
+
+        @* <form asp-action="ObterPorData">
+            <input type="datetime-local" asp-for="Data" class="form-control" />
+            <a asp-action="ObterPorData" role="button" class="btn btn-info m-3">Obter Por Data</a>
+            </form> *@
+
+        @using (Html.BeginForm("ObterPorData"))
+        {
+            <label style="font-size: 25px; font-weight: 600; margin-bottom: 10px; color: #1F879C">Data e Hora</label>
+            <input type="datetime-local" id="data" name="data" class="form-control" placeholder="Insira uma data válida"
+            required>
+            <input type="submit" value="Obter por Data e Hora" class="btn btn-info m-3" asp-action="ObterPorData">
+        }
+
+        @* @using (Html.BeginForm("ObterPorStatus"))
+            {
+            <input type="number" id="status" name="status" class="form-control" placeholder="Insira um status existente"
+            required max="1" min="0">
+            <input type="submit" value="Obter por Status" class="btn btn-info m-3" asp-action="ObterPorStatus">
+            } *@
+
+        @using (Html.BeginForm("ObterPorStatus"))
+        {
+            <label asp-for="Status" class="control-label" style="font-size: 25px; font-weight: 600; margin-bottom: 10px; color: #1F879C"></label>
+            <select asp-for="Status" name="Status" class="form-select" aria-label="Default select example">
+                <option value=0>Pendente</option>
+                <option value=1>Finalizado</option>
+            </select>
+            <input type="submit" value="Obter por Status" class="btn btn-info m-3" asp-action="ObterPorStatus">
+        }
+
+        @* <form asp-action="ObterPorStatus">
+            <input asp-for="Id" class="form-control" />
+            <a asp-action="ObterPorStatus" role="button" class="btn btn-info m-3">Obter Por Status</a>
+            </form> *@
+    </div>
+<div class="mb-5">
+    <a asp-action="Index" role="button" class="col-3 btn btn-secondary">Voltar</a>
+</div>
+</div>

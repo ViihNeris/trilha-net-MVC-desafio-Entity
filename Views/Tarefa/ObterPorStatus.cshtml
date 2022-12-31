@@ -1,0 +1,53 @@
+@model IEnumerable<trilha_net_MVC_desafio_Entity.Models.Tarefa>
+
+@{
+    ViewData["Title"] = "Obter Tarefa por Status";
+}
+<div class="d-flex flex-column align-items-center text-center">
+
+    <h1 class="mt-5">@ViewData["Title"]</h1>
+
+    <p>Visualize abaixo o resultado da sua consulta por "<b>Status</b>".</p>
+
+    <table class="table m-5 table-hover align-middle">
+    <thead>
+        <tr class="table-danger p-3">
+            <th class="p-3">@Html.DisplayNameFor(model => model.Id)</th>
+            <th class="p-3">@Html.DisplayNameFor(model => model.Titulo)</th>
+            <th class="p-3">@Html.DisplayNameFor(model => model.Descricao)</th>
+            <th class="p-3">@Html.DisplayNameFor(model => model.Status)</th>
+            <th class="p-3">@Html.DisplayNameFor(model => model.Data) e Hora</th>
+            <th class="p-3">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) // para cada elemento que você recebeu na Model
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Descricao)
+                </td>
+                <td class="table-danger" style="font-size: 18; font-weight: 600; font-style: italic">
+                    @Html.DisplayFor(model => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Data)
+                </td>
+                <td>
+                    <a asp-action="Atualizar" role="button" class="btn btn-warning" asp-route-id="@item.Id">Atualizar</a> @* Atualizar *@
+                    <a asp-action="Deletar"role="button" class="btn btn-danger" asp-route-id="@item.Id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+<div class="d-flex justify-content-center mb-5">
+    <a asp-action="BuscaDetalhada" role="button" class="col-3 btn btn-secondary">Voltar</a>
+</div>

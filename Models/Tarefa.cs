@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using trilha_net_MVC_desafio_Entity.Models;
 
-namespace TrilhaApiDesafio.Models
+namespace trilha_net_MVC_desafio_Entity.Models
 {
     public class Tarefa
     {

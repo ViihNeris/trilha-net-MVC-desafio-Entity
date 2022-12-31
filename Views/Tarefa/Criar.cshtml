@@ -1,0 +1,47 @@
+@model trilha_net_MVC_desafio_Entity.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Criar Nova Tarefa";
+}
+
+<h1 class="text-center m-4">@ViewData["Title"]</h1>
+
+<hr />
+
+<div class="row d-flex justify-content-center flex-column align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Criar">
+            <div class="form-group">
+                <label asp-for="Titulo" style="font-size: 19px; font-weight: 600" class="control-label mb-2"></label>
+                <input asp-for="Titulo" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Descricao" style="font-size: 19px; font-weight: 600" class="control-label mb-2"></label>
+                <input asp-for="Descricao" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Data" style="font-size: 18px; font-weight: 600" class="control-label mb-2">Data e Hora</label>
+                <input type="datetime-local" asp-for="Data" class="form-control" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label asp-for="Status" style="font-size: 18px; font-weight: 600" class="control-label mb-2"></label>
+                <select name="Status" class="form-select" aria-label="Default select example">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value=0>Pendente</option>
+                    <option value=1>Finalizado</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group d-flex justify-content-center mb-5">
+                <input type="submit" value="Adicionar" style="width: 100%" class="btn btn-success mt-3" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<div class="d-flex justify-content-center mb-5">
+    <a asp-action="Index" role="button" class="mt-5 col-4 btn btn-secondary">Voltar</a>
+</div>
