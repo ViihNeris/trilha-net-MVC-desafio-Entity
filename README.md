@@ -54,5 +54,31 @@ Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que e
 ```
 
 
-## Solução
+## Proposta
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+<br><br>
+
+## Solução da DEV 👩🏻‍💻💜
+Foi decidido desenvolver o desafio em formato MVC, aplicando todos os métodos solicitados. Acompanhe abaixo as soluções desenvolvidas:
+
+### 🔵 Visualizar todas as tarefas (Obter Todos/READ):
+
+![image](https://user-images.githubusercontent.com/93789218/210187322-98d9aacb-5d47-47f7-aa99-37ac2d149cfa.png)
+
+<br>
+
+### 🟢 Criar nova tarefa (CREATE/INSERT):
+
+![image](https://user-images.githubusercontent.com/93789218/210187411-fee45962-323c-4a54-bfef-84e0363bd4fc.png)
+
+### 🟠 Atualizar uma tarefa (UPDATE):
+
+![image](https://user-images.githubusercontent.com/93789218/210187454-f47b894d-eb30-4309-b882-ed4ec5c95613.png)
+
+### 🔴 Remover uma tarefa (DELETE):
+
+![image](https://user-images.githubusercontent.com/93789218/210187674-c38a867c-642d-4600-b8c3-cd94ef3b41bf.png)
+
+### 🔎 Busca Detalhada:
+
+...
