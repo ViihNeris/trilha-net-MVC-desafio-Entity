@@ -65,8 +65,6 @@ Foi decidido desenvolver o desafio em formato MVC, aplicando todos os métodos s
 
 ![image](https://user-images.githubusercontent.com/93789218/210187322-98d9aacb-5d47-47f7-aa99-37ac2d149cfa.png)
 
-<br>
-
 ### 🟢 Criar nova tarefa (CREATE/INSERT):
 
 ![image](https://user-images.githubusercontent.com/93789218/210187411-fee45962-323c-4a54-bfef-84e0363bd4fc.png)
@@ -81,4 +79,47 @@ Foi decidido desenvolver o desafio em formato MVC, aplicando todos os métodos s
 
 ### 🔎 Busca Detalhada:
 
-...
+![image](https://user-images.githubusercontent.com/93789218/210191301-bbc12322-1568-40de-9e6c-304a72c8215d.png)
+
+
+###### Dentro da "<b>Busca Detalhada</b>" há 4 opções disponíveis para o usuário conseguir localizar seu registro/tarefa, as quais são por: <b>ID</b>, <b>Título</b>, <b>Data & Hora</b> e <b>Status</b>. Observe abaixo:
+
+#### 🔵 Busca por ID (ObterPorId/GetById/READ):
+
+![image](https://user-images.githubusercontent.com/93789218/210191491-ec4658c9-b934-4d00-b6f6-826738175e95.png)
+
+#### 🔵 Busca por Título (ObterPorTitulo/READ):
+
+![image](https://user-images.githubusercontent.com/93789218/210191537-44637944-d441-440c-8167-7140a151b66f.png)
+
+#### 🔵 Busca por Data e Hora (ObterPorData/READ):
+
+![image](https://user-images.githubusercontent.com/93789218/210191584-c4970e7b-3e57-46ce-9e13-8754753f9f6c.png)
+
+#### 🔵 Busca por Status (ObterPorStatus/READ):
+
+![image](https://user-images.githubusercontent.com/93789218/210191633-ce4bb368-c136-4b56-ad1c-0aa9400a8a84.png)
+
+<br>
+
+### Database 🎲
+
+Todos os dados estão armazenados localmente (<b>SqlServer</b>), preenchendo o requisito da persistência dos dados:
+
+![image](https://user-images.githubusercontent.com/93789218/210191926-10d0d5fc-b2eb-4f1f-8e81-59c12fb5ff9c.png)
+
+<br>
+
+## Acho que não entendi muito bem... 🤔💭
+Sem problemas! Aqui vão 2 vídeos rápidos deste projeto em funcionamento!
+
+[GerenciadorDeTarefas_dev_part1.webm](https://user-images.githubusercontent.com/93789218/210193002-fb3fab31-5d22-4614-91fb-537c3cec56be.webm)
+
+[GerenciadorDeTarefas_dev_part2.webm](https://user-images.githubusercontent.com/93789218/210193267-e89af3b5-94d4-4ff5-a1f8-09d30bc8f88f.webm)
+
+<br>
+
+## Obrigada! ✅
+Acompanhe mais projetos meus em https://github.com/ViihNeris 😉💜👩🏻‍💻
+
+
