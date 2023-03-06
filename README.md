@@ -1,4 +1,4 @@
-# DIO - Trilha .NET - API e Entity Framework
+# DIO – Trilha .NET – API e Entity Framework
 www.dio.me
 
 ## Desafio de projeto
